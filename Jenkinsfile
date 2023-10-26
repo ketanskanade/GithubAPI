@@ -5,7 +5,7 @@ pipeline {
         stage(build) {
             steps {
                 script {
-                    sh 'docker build -t GithubAPI .'
+                    docker.build(git@github.com:ketanskanade/GithubAPI.git/GithubAPI)
                 }
             }
 
