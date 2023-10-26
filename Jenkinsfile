@@ -1,11 +1,11 @@
 pipeline {
 
-    agent none
+    agent any
     stages {
         stage(build) {
-            step {
+            steps {
                 script {
-                    docker build -t GithubAPI .
+                    sh 'docker build -t GithubAPI .'
                 }
             }
 
